@@ -1,0 +1,26 @@
+[
+    {
+        "nombre": "Juan",
+        "apellido": "Pérez",
+        "identificacion": "123456789",
+        "residencia": "Ciudad de México",
+        "problema": "Error en el sistema de facturación",
+        "estado": "En espera"
+    },
+    {
+        "nombre": "María",
+        "apellido": "Gómez",
+        "identificacion": "987654321",
+        "residencia": "Bogotá",
+        "problema": "No puede acceder a su cuenta",
+        "estado": "Atendido"
+    },
+    {
+        "nombre": "Carlos",
+        "apellido": "López",
+        "identificacion": "456789123",
+        "residencia": "Lima",
+        "problema": "Problema con el pago en línea",
+        "estado": "Solucionado"
+    }
+]

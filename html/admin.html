@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Administrador</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+ 
+    <header>
+        <h1>Panel de Administración</h1>
+        <div id="user-info">
+            <span id="username"></span>
+            <button id="logout-button">Cerrar Sesión</button>
+        </div>
+       
+        <ul>
+            <li> <a href="#">Inicio</a></li>
+            <li> <a href="admin.html">Dashboard</a></li>
+            <li> <a href="turnos.html">Personas en turnos</a></li>
+            <li> <a href="historial.html">Historial de turnos</a></li>
+        </ul>
+    
+    </header>
+
+    <!-- Body -->
+    <main>
+        <h2>Información de Usuarios</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Identificación</th>
+                    <th>Lugar de Residencia</th>
+                    <th>Problema</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se llenarán dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
+    
+    <footer>
+        <p>Derechos reservados &copy; 2023</p>
+    </footer>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
