@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #2196F3; /* Azul claro */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #FF5722; /* Naranja vibrante */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Añadimos transform para un efecto más dinámico */
+  }
+  
+  header button:hover {
+    background-color: #E64A19; /* Naranja más oscuro al hacer hover */
+    transform: scale(1.05); /* Efecto de escala para hacerlo más interactivo */
+  }
+
+  main {
+    padding: 1rem;
+  }
+  
+  iframe {
+    display: block;
+    margin: 1rem auto;
+    max-width: 100%;
+  }
+  
+  .informacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .informacion section {
+    flex: 1 1 calc(50% - 1rem);
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco con transparencia */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    opacity: 0.9; /* Transparencia ligera */
+    transition: opacity 0.3s ease; /* Transición suave al hacer hover */
+  }
+  
+  .informacion section:hover {
+    opacity: 1; /* Sin transparencia al hacer hover */
+  }
+ .informacion section {
+  padding: 2rem; /* Padding general para la sección */
+  max-width: 800px; /* Ancho máximo para mejor lectura */
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: left; /* Alinear el texto a la izquierda (puedes cambiarlo a "center" si prefieres) */
+}
+
+.informacion section h2 {
+  text-align: center; /* Centrar el título */
+  margin-bottom: 1.5rem; /* Espacio debajo del título */
+}
+
+.informacion ol {
+  padding-left: 2rem; /* Padding para la lista ordenada */
+}
+
+.informacion section ol li {
+  margin-bottom: 1rem; /* Espacio entre elementos de la lista */
+}
+  .informacion section h2 {
+    margin-top: 0;
+    color: #2196F3; /* Azul claro para los títulos */
+  }
+  
+  .informacion ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .informacion ul li {
+    background: #E3F2FD; /* Azul muy claro para los elementos de lista */
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  blockquote {
+    background: #E3F2FD; /* Azul muy claro para las citas */
+    padding: 1rem;
+    border-left: 5px solid #2196F3; /* Borde azul claro */
+    margin: 1rem 0;
+  }
+  
+  /* Estilo específico para centrar la sección "Cómo Funciona" */
+  .informacion section.como-funciona {
+    text-align: center; /* Centrar el texto */
+    max-width: 800px; /* Ancho máximo para mejor lectura */
+    margin: 0 auto; /* Centrar horizontalmente */
+    flex: 1 1 100%; /* Ocupar todo el ancho */
+  }
+  
+  footer {
+    background: #2196F3; /* Azul claro */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .informacion {
+      flex-direction: column;
+    }
+  
+    .informacion section {
+      flex: 1 1 100%;
+    }
+  }
