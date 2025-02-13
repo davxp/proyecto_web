@@ -2,24 +2,24 @@
     {
         "nombre": "Juan",
         "apellido": "Pérez",
-        "identificacion": "123456789",
-        "residencia": "Ciudad de México",
+        "identificacion": "1044615832",
+        "residencia": "Soledad (cra 16 #8-11)",
         "problema": "Error en el sistema de facturación",
         "estado": "En espera"
     },
     {
         "nombre": "María",
         "apellido": "Gómez",
-        "identificacion": "987654321",
-        "residencia": "Bogotá",
+        "identificacion": "133022112",
+        "residencia": "Soledad (cra 11a #76d-12)",
         "problema": "No puede acceder a su cuenta",
         "estado": "Atendido"
     },
     {
         "nombre": "Carlos",
         "apellido": "López",
-        "identificacion": "456789123",
-        "residencia": "Lima",
+        "identificacion": "20323403",
+        "residencia": "Barranquila (cra 51b #106",
         "problema": "Problema con el pago en línea",
         "estado": "Solucionado"
     }
