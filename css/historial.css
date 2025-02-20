@@ -1,0 +1,119 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #2196F3; /* Color base de la página */
+    color: white; /* Color de texto general */
+}
+
+/* Header */
+header {
+    background-color: #2196F3; /* Color base del header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Cambia a columna para separar el menú */
+}
+
+/* Contenedor superior (título y user-info) */
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Separa el título y el user-info */
+    align-items: center; /* Alinea verticalmente */
+}
+
+header h1 {
+    margin: 0;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logout-button {
+    background-color: #ff5722; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    background-color: #e64a19; /* Color del botón al pasar el mouse */
+}
+
+/* Menú */
+header ul {
+    list-style-type: none;
+    margin: 10px 0 0 0; /* Espacio arriba para separar del header-top */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    gap: 20px; /* Espacio entre elementos del menú */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para el menú */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover en los enlaces */
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: white; /* Fondo blanco para el contenido principal */
+    color: #333; /* Color de texto para el contenido principal */
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333; /* Color de texto para las cabeceras de la tabla */
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Fondo alterno para filas pares */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Efecto hover en las filas */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Mantiene el footer al final */
+}

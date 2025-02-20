@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/historial.css">
     <title>Historial Admin</title>
 </head>
 <body>
@@ -21,9 +21,30 @@
             <li><a href="historial.html">Historial de turnos</a></li>
         </ul>
     </header>
+
+    <main>
+        <h2>Historial de Turnos</h2>
+        <table id="historial-table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Identificación</th>
+                    <th>Problema</th>
+                    <th>Hora de Solicitud</th>
+                    <th>Hora de Solución</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Las filas se generarán dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+    </main>
+
     <footer>
         <p>© 2025 Universidad de Barranquilla. Todos los derechos reservados.</p>
     </footer>
-    <script src="../js/admin.js"></script>
+
+    <script src="../js/historial.js"></script>
 </body>
 </html>
