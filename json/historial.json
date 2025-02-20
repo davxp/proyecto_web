@@ -2,7 +2,7 @@
     {
         "nombre": "Juan",
         "apellido": "Pérez",
-        "identificacion": "123456789",
+        "identificacion": "1044615832",
         "problema": "Error en el sistema de facturación",
         "horaSolicitud": "10:00 AM",
         "horaSolucion": "11:30 AM"
@@ -10,16 +10,16 @@
     {
         "nombre": "Maria",
         "apellido": "Gomez",
-        "identificacion": "987654321",
-        "problema": "Problema con la red WiFi",
+        "identificacion": "133022112",
+        "problema": "No puede acceder a su cuenta",
         "horaSolicitud": "09:15 AM",
         "horaSolucion": "10:45 AM"
     },
     {
         "nombre": "Carlos",
         "apellido": "Lopez",
-        "identificacion": "456789123",
-        "problema": "Fallo en el servidor de correo",
+        "identificacion": "20323403",
+        "problema": "Problema con el pago en línea",
         "horaSolicitud": "02:00 PM",
         "horaSolucion": "03:30 PM"
     },
