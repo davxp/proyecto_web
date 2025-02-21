@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>Formulario de Turnos</title>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div id="user-info">
+                <span id="username"></span>
+                <button id="logout-button">Cerrar Sesión</button>
+            </div>
+            <h1>Panel de Administración</h1>
+        </div>
+        <ul>
+            <li><a href="admin.html">Dashboard</a></li>
+            <li><a href="formulario.html">Contactanos</a></li>
+            <li><a href="historial.html">Historial de turnos</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="turnoForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Universidad de Barranquilla. Todos los derechos reservados.</p>
+    </footer>
+    <script src="../js/formulario.js"></script>
+</body>
+</html>

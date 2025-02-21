@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Fondo gris claro para la página */
+    color: #333; /* Color de texto general */
+}
+
+/* Header */
+header {
+    background-color: #2196F3; /* Color base del header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column; /* Cambia a columna para separar el menú */
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between; /* Separa el título y el user-info */
+    align-items: center; /* Alinea verticalmente */
+}
+
+header h1 {
+    margin: 0;
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+#user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logout-button {
+    background-color: #ff5722; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    background-color: #e64a19; /* Color del botón al pasar el mouse */
+}
+
+/* Menú */
+header ul {
+    list-style-type: none;
+    margin: 10px 0 0 0; /* Espacio arriba para separar del header-top */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra el menú */
+    gap: 20px; /* Espacio entre elementos del menú */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente para el menú */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover en los enlaces */
+}
+
+/* Body */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px;
+    background-color: white; /* Fondo blanco para el contenido principal */
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Ancho máximo del formulario */
+    padding: 20px;
+    background-color: white; /* Fondo blanco para el formulario */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos del formulario */
+#turnoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre elementos del formulario */
+}
+
+#turnoForm label {
+    font-weight: bold;
+}
+
+#turnoForm input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#turnoForm button {
+    background-color: #2196F3; /* Color del botón */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#turnoForm button:hover {
+    background-color: #1976D2; /* Color del botón al pasar el mouse */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}

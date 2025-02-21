@@ -12,6 +12,14 @@ async function cargarDatos() {
     }
 }
 
+const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+if (!loggedInUser) {
+    alert('No hay sesión activa. Redirigiendo al login...');
+    window.location.href = '../html/login.html';
+} else {
+    document.getElementById('username').textContent = loggedInUser.username;
+}
+
 // Botón de cerrar sesión
 document.getElementById('logout-button').addEventListener('click', function() {
     localStorage.removeItem('loggedInUser');
