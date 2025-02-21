@@ -1,46 +1,52 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+    event.preventDefault();
 
-    const nombreUsuario = document.getElementById('username').value;
-    const contrasena = document.getElementById('password').value;
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const errorMessage = document.getElementById('error-message');
 
-    if (nombreUsuario === '') {
-        alert('Complete el campo de usuario.');
+    if (!username || !password) {
+        errorMessage.textContent = 'Por favor, complete todos los campos';
         return;
     }
 
-    if (contrasena === '') {
-        alert('Complete el campo de contraseña.');
-        return;
-    }
-
-    console.log("Realizando solicitud fetch...");
-    fetch('../json/users.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar el archivo JSON');
-            }
-            return response.json();
-        })
+    fetch('../json/data.json')
+        .then(response => response.json())
         .then(usuarios => {
-            console.log("Usuarios cargados:", usuarios); // Verifica si los usuarios se cargaron correctamente
-            const usuario = usuarios.find(u => u.username === nombreUsuario && u.password === contrasena);
+            console.log('Datos cargados:', usuarios);
+
+            const usuario = usuarios.find(u => 
+                u.credenciales.username === username && 
+                u.credenciales.password === password
+            );
+
+            console.log('Usuario encontrado:', usuario);
 
             if (usuario) {
-                console.log("Usuario encontrado:", usuario); // Verifica si el usuario se encontró
-                localStorage.setItem('loggedInUser', JSON.stringify(usuario));
+                const datosGuardados = {
+                    username: usuario.credenciales.username,
+                    password: usuario.credenciales.password,
+                    role: usuario.credenciales.role,
+                    nombre: usuario.nombre,
+                    apellido: usuario.apellido,
+                    identificacion: usuario.identificacion,
+                    residencia: usuario.residencia
+                };
 
-                if (usuario.role === 'admin') {
+                console.log('Datos a guardar:', datosGuardados);
+                localStorage.setItem('loggedInUser', JSON.stringify(datosGuardados));
+
+                if (usuario.credenciales.role === 'admin') {
                     window.location.href = '../html/admin.html';
                 } else {
                     window.location.href = '../html/user.html';
                 }
             } else {
-                alert('Datos Incorrectos');
+                errorMessage.textContent = 'Usuario o contraseña incorrectos';
             }
         })
         .catch(error => {
-            console.error('Error en el fetch:', error); // Muestra errores en la consola
-            alert('Error al cargar los datos. Por favor, inténtalo de nuevo.');
+            console.error('Error:', error);
+            errorMessage.textContent = 'Error al intentar iniciar sesión. Por favor, intente nuevamente.';
         });
 });

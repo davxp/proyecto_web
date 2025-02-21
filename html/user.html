@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User</title>
+    <title>Página de Usuario</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/user.css">
 </head>
 <body>
-    <h1>Bienvenido, Usuario</h1>
-    <p>Esta es la página de usuario.</p>
-    <a href="login.html">Cerrar Sesión</a>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div id="user-info">
+                <span id="username"></span>
+                <button id="logout-button">Cerrar Sesión</button>
+            </div>
+            <h1>Bienvenido</h1>
+        </div>
+        <ul>
+            <li><a href="user.html">Inicio</a></li>
+            <li><a href="formulario.html">Contactanos</a></li>
+            <li><a href="historialUsers.html">Historial de turnos</a></li>
+        </ul>
+    </header>
+
+    <!-- Body -->
+    <main>
+        <div class="datos-personales">
+            <h2>Mis Datos Personales</h2>
+            <table class="tabla-datos">
+                <tr>
+                    <th>Campo</th>
+                    <th>Información</th>
+                </tr>
+                <tr>
+                    <td>Nombre</td>
+                    <td id="nombre-usuario"></td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td id="apellido-usuario"></td>
+                </tr>
+                <tr>
+                    <td>Identificación</td>
+                    <td id="identificacion-usuario"></td>
+                </tr>
+                <tr>
+                    <td>Residencia</td>
+                    <td id="residencia-usuario"></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Universidad de Barranquilla. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/user.js"></script>
 </body>
 </html>

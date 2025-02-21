@@ -1,27 +1,37 @@
 [
     {
-        "nombre": "Juan",
-        "apellido": "Pérez",
-        "identificacion": "1044615832",
-        "residencia": "Soledad (cra 16 #8-11)",
-        "problema": "Error en el sistema de facturación",
-        "estado": "En espera"
+        "credenciales": {
+            "username": "admin1",
+            "password": "admin123",
+            "role": "admin"
+        }
     },
     {
-        "nombre": "María",
-        "apellido": "Gómez",
-        "identificacion": "133022112",
-        "residencia": "Soledad (cra 11a #76d-12)",
-        "problema": "No puede acceder a su cuenta",
-        "estado": "Atendido"
-        
+        "credenciales": {
+            "username": "admin2",
+            "password": "admin456",
+            "role": "admin"
+        }
     },
     {
-        "nombre": "Carlos",
-        "apellido": "López",
-        "identificacion": "20323403",
-        "residencia": "Barranquila (cra 51b #106",
-        "problema": "Problema con el pago en línea",
-        "estado": "Solucionado"
+        "credenciales": {
+            "username": "user1",
+            "password": "user123",
+            "role": "user"
+        }
+    },
+    {
+        "credenciales": {
+            "username": "user2",
+            "password": "user456",
+            "role": "user"
+        }
+    },
+    {
+        "credenciales": {
+            "username": "user3",
+            "password": "user789",
+            "role": "user"
+        }
     }
-]
+] 

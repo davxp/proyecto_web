@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../css/admin.css">
 </head>
 <body>
- 
     <header>
         <div class="header-top">
             <div id="user-info">
@@ -18,13 +17,16 @@
         </div>
         <ul>
             <li><a href="admin.html">Dashboard</a></li>
-            <li><a href="formulario.html">Contactanos</a></li>
+            <li><a href="registros.html">Usuarios Registrados</a></li>
             <li><a href="historial.html">Historial de turnos</a></li>
         </ul>
     </header>
 
-    <!-- Body -->
     <main>
+        <div class="actions-container">
+            <button id="add-user-btn" class="action-btn">Agregar Usuario</button>
+        </div>
+
         <h2>Información de Usuarios</h2>
         <table id="user-table">
             <thead>
@@ -35,19 +37,60 @@
                     <th>Lugar de Residencia</th>
                     <th>Problema</th>
                     <th>Estado</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 <!-- Las filas se llenarán dinámicamente con JavaScript -->
             </tbody>
         </table>
+
+        <!-- Modal para agregar/editar usuario -->
+        <div id="user-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title">Agregar Usuario</h2>
+                <form id="user-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="identificacion">Identificación:</label>
+                        <input type="text" id="identificacion" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="residencia">Residencia:</label>
+                        <input type="text" id="residencia" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="problema">Problema:</label>
+                        <input type="text" id="problema" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" required>
+                            <option value="En espera">En espera</option>
+                            <option value="Atendido">Atendido</option>
+                            <option value="Solucionado">Solucionado</option>
+                        </select>
+                    </div>
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
     </main>
 
-    
     <footer>
         <p>© 2025 Universidad de Barranquilla. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Agregar axios antes del script principal -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="../js/admin.js"></script>
 </body>
 </html>

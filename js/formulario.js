@@ -9,12 +9,16 @@ document.getElementById("turnoForm").addEventListener("submit", function (event)
         telefono: document.getElementById("telefono").value,
     };
 
+    console.log("Datos del formulario:", formData);
+
     // Envía los datos a Google Sheets
     enviarDatos(formData);
 });
 
 function enviarDatos(data) {
-    const url = "https://script.google.com/macros/s/AKfycbxPCymdsQ529HpE31bAG_ZzSyIxoImRxvn1GMARxQ1fYzYeJPkLflGrLc1108R0GcE/exec"; // Reemplaza con la URL de tu API
+    const url = "https://script.google.com/macros/s/AKfycbxuM2bulfXcnoVJllLeknz6_vjP0tDt_TptJdscuBUwp2Heg8CSeT3dyRcwIfgM3WY/exec"; // Reemplaza con la URL de tu API
+
+    console.log("Enviando datos a la URL:", url);
 
     fetch(url, {
         method: "POST",
@@ -23,17 +27,22 @@ function enviarDatos(data) {
         },
         body: JSON.stringify(data),
     })
-        .then((response) => response.json())
+        .then((response) => {
+            console.log("Respuesta recibida:", response);
+            if (!response.ok) {
+                throw new Error("Network response was not ok " + response.statusText);
+            }
+            return response.json();
+        })
         .then((result) => {
             console.log("Success:", result);
             alert("Datos guardados con éxito en Google Sheets");
         })
         .catch((error) => {
-            console.error("Error:", error);
-            alert("Hubo un error al guardar los datos");
+            console.error("Error en la solicitud fetch:", error);
+            alert("Hubo un error al guardar los datos: " + error.message);
         });
 }
-
 
 const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 if (!loggedInUser) {
